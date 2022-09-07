@@ -1,0 +1,707 @@
+@mixin m-mq($width: 700px)
+  @media screen and (min-width: $width)
+    @content
+
+@mixin l-mq($width: 1020px)
+  @media screen and (min-width: $width)
+    @content
+
+html
+  font-size: 62.5%
+
+  body
+    background: url(../images/white_bg.jpg) left top no-repeat
+    background-attachment: fixed
+    color: #666
+    font-size: 1.6rem
+
+    li
+      list-style: none
+
+    a
+      color: #666
+      text-decoration: none
+
+    img
+      height: auto
+      width: 100%
+
+    .pc
+      display: none
+      @include l-mq
+        display: block
+
+// header
+.header
+  display: flex
+  justify-content: flex-end
+  left: 20px
+  position: absolute
+  right: 20px
+  top: 20px
+  @include l-mq
+    box-sizing: border-box
+    display: block
+    left: 0
+    max-width: 310px
+    padding: 60px 0 60px 50px
+    position: fixed
+    top: 0
+    width: 14%
+    z-index: 999
+
+  .hamburger-menu
+    height: 20px
+    position: relative
+    width: 26px
+    z-index: 999
+    @include l-mq
+      display: none
+
+    span
+      background: #444
+      display: block
+      height: 2px
+      left: 0
+      position: absolute
+      right: 0
+      &:first-of-type
+        top: 0
+      &:nth-of-type(2)
+        top: 9px
+      &:last-of-type
+        bottom: 0
+    
+    // closebtn
+  .close-btn
+    span
+      background: #fff
+      transition: all .2s linear
+      &:first-of-type
+        top: 10px
+        transform: rotate(45deg)
+      &:nth-of-type(2)
+        opacity: 0
+      &:last-of-type
+        top: 10px
+        transform: rotate(-45deg)
+
+  .header-inner
+    background: rgba(0, 0, 0, .9)
+    bottom: 0
+    left: 0
+    padding: 100px 0 0
+    position: fixed
+    right: 0
+    top: 0
+    z-index: 10
+    @include l-mq
+      background: none
+      padding: 0
+      position: static
+
+    .global-nav
+      margin: 0 auto
+      width: 60%
+      @include l-mq
+        width: 100%
+
+      li
+        padding: 0 0 10px
+        @include l-mq
+          border-bottom: 1px solid #eee
+        &:not(:last-of-type)
+          margin: 0 0 40px
+
+        a
+          color: #888
+          font-size: 1.4rem
+          @include l-mq
+            color: #999
+
+        .active
+          color: #fff
+          @include l-mq
+            color: #000
+
+.hero-wrap
+  height: 100vh
+  max-height: 1012px
+  overflow: hidden
+  padding: 30px 0 0 30px
+  position: relative
+  &::after
+    background: #fafafa
+    bottom: 10vh
+    box-shadow: 0px 0 5px #eee
+    content: ''
+    display: block
+    height: 30vh
+    position: absolute
+    right: 0
+    width: 200px
+    z-index: -1
+    @include l-mq
+      bottom: 6vh
+      height: 40vh
+      width: 40vh
+
+  .hero
+    background: url(../images/sp_hero.png) 70% bottom no-repeat
+    background-size: cover
+    height: 70vh
+    width: 80%
+    filter: saturate(0.4)
+    @include l-mq
+      align-items: flex-start
+      background: none
+      display: flex
+      justify-content: flex-end
+      height: auto
+      width: 100%
+    
+    video
+      width: 70%
+
+  .hero-heading
+    left: 40px
+    position: absolute
+    top: 10vh
+    text-shadow: 2px 3px 2px #aaa
+    @include l-mq
+      bottom: 20vh
+      left: auto
+      right: 60px
+      top: auto
+
+    .page-title
+      font-size: 2rem
+      @include l-mq
+        font-size: 4rem
+
+    .secondary-title
+      font-size: 1.2rem
+      @include l-mq
+        font-size: 1.4rem
+
+  .page-hero_scroll
+    bottom: 2%
+    left: calc( 50% -  25px)
+    position: absolute
+    height: 150px
+    width: 50px
+
+    .scroll-text
+      color: #aaa
+      display: inline-block
+      left: 0
+      position: absolute
+      top: 16px
+      transform: rotate(90deg)
+    
+    .scroll-line
+      animation: pagescroll 3s ease-in .5s infinite alternate forwards running
+      background: #aaa
+      bottom: 90px
+      display: block
+      left: 15px
+      position: absolute
+      top: 50px
+      width: 1px
+      @keyframes pagescroll
+        0%
+          bottom: 90px
+        100%
+          bottom: 0
+// common
+.section-wrap
+  padding: 0 20px
+  @include l-mq
+    margin: 0 0 80px
+    padding: 0
+
+.l-section
+  padding: 50px 0
+  @include l-mq
+    padding: 80px 0 80px 20%
+
+
+  .section-title
+    font-family: 'Playfair Display', serif
+    font-size: 4rem
+    font-weight: normal
+    letter-spacing: .4rem
+    padding: 0 0 14px
+    position: relative
+    margin: 0 0 100px
+    &::after
+      background: #ddd
+      bottom: 0
+      content: ''
+      left: 0
+      max-width: 700px
+      position: absolute
+      height: 2px
+      width: 80%
+    @include l-mq
+      font-size: 5rem
+
+// profile
+.bg-section
+  position: relative
+  &::after
+    background: #fafafa
+    bottom: -200px
+    box-shadow: 0px 0 5px #eee
+    content: ''
+    display: block
+    height: 800px
+    left: 0
+    position: absolute
+    width: 40%
+    z-index: -1
+    @include l-mq
+      bottom: -400px
+      height: 1000px
+
+.l-profile
+  .profile-wrap
+    max-width: 470px
+    margin: 0 auto
+    @include l-mq
+      max-width: initial
+
+    .profile-head
+      margin: 0 0 50px
+      @include l-mq
+        display: flex
+        flex-flow: row-reverse
+        justify-content: space-around
+
+      .profile-head_inner
+        @include l-mq
+          width: 44%
+
+        .profile-table
+          display: flex
+          flex-wrap: wrap
+          font-size: 1.4rem
+          margin: 0 0 40px
+
+          dt, dd
+            border-bottom: 1px solid #ddd
+            padding: 0 0 10px
+            &:not(:last-of-type)
+              margin: 0 0 30px
+
+          dt
+            width: 30%
+
+          dd
+            width: 70%
+        
+        .accounts-title
+          margin: 0 0 20px
+        
+        .accounts-kind
+          display: flex
+          font-size: 1.4rem
+
+          li
+            &:not(:last-of-type)
+              margin: 0 50px 0 0
+      
+      .frolile-head_image
+        display: none
+        @include l-mq
+          display: block
+          width: 50%
+    
+    .profile-foot
+      @include l-mq
+        display: flex
+        width: 80%
+        justify-content: space-between
+      
+      > div
+        + div
+          margin: 20px 0 0
+          @include l-mq
+            margin: 0
+        @include l-mq
+          width: 48%
+        h3
+          margin: 0 0 20px
+          padding: 0 0 8px
+          position: relative
+          &::after
+            background: #aaa
+            bottom: 0
+            content: ''
+            left: 0
+            height: 2px
+            position: absolute
+            width: 200px
+        p
+          font-size: 1.4rem
+          line-height: 1.5
+
+// skill
+.skill-wrap
+  @include l-mq
+    display: flex
+    justify-content: space-around
+
+  .skill-kind
+    margin: 0 auto 80px
+    position: relative
+    width: 90%
+    @include l-mq
+      margin: 50px 0 0
+      width: 46%
+    
+    .skill-bar_wrap
+      margin: 0 0 10px
+      max-width: 550px
+      padding: 0 0 0 10px
+      width: 100%
+      @include m-mq
+        margin: 0 auto 10px
+      @include l-mq
+        margin: 0 0 20px
+      
+      h4
+        font-size: 1.4rem
+        font-weight: normal
+
+      .skill-bar_box
+        border: 1px solid #ddd
+        border-radius: 6px
+        box-sizing: border-box
+        color: #fff
+        height: 30px
+        position: relative
+        @include m-mq
+        height: 34px
+
+        .skill-bar_num,
+        .skill-bar
+          position: absolute
+          top: 0
+
+        .skill-bar_num
+          font-size: 2.2rem
+          left: 10%
+          line-height: 34px
+          z-index: 1
+        
+        .skill-bar
+          background: #ddd
+          border-radius: 4px
+          height: 100%
+          transition: width 1.5s cubic-bezier(1.000, 0.035, 0.195, 0.345)
+          width: 10%
+        .html-bar
+          transition-delay: .5s
+        .css-bar
+          transition-delay: 1s
+        .js-bar
+          transition-delay: 1.5s
+        .wordpress-bar
+          transition-delay: 2s
+        .php-bar
+          transition-delay: 2.5s
+        .photoshop-bar
+          transition-delay: 3s
+        .illustrator-bar
+          transition-delay: 3.5s
+
+    .skill-divider
+      background: #ddd
+      bottom: 0
+      left: 0
+      position: absolute
+      top: 0
+      width: 4px
+      @include m-mq
+        left: calc( 50% -  280px)
+      @include l-mq
+        bottom: 7%
+        left: 0
+  
+  .skill-career_wrap
+    @include l-mq
+      width: 48%
+
+    .skill-nav
+      display: flex
+      justify-content: space-around
+      margin: 0 auto 50px
+      max-width: 600px
+
+      li
+        align-items: center
+        color: #aaa
+        display: flex
+        font-size: 1.2rem
+        justify-content: center
+        padding: 10px 0
+        position: relative
+        transition: all .5s ease-out
+        width: 44%
+        &::before
+          background: #ddd
+          bottom: 0
+          content: ''
+          position: absolute
+          right: 0
+          transition: all .5s ease-out
+          top: 50%
+          width: 1px
+        &::after
+          background: #ddd
+          bottom: 0
+          content: ''
+          height: 1px
+          left: 70%
+          position: absolute
+          right: 0
+          transition: all .5s ease-out
+        @include m-mq
+          font-size: 1.4rem
+        @include l-mq
+          cursor: pointer
+          &:hover
+            &::after
+              left: 40%
+
+      .target-skill
+        color: #444
+        &::before
+          background: #444
+          top: 20%
+        &::after
+          background: #444
+          left: 20%
+
+
+    .skill-career
+      max-width: 500px
+      margin: 0 auto
+      height: 500px
+      position: relative
+      @include l-mq
+        max-width: initial
+        width: 84%
+
+      .career-inner
+        opacity: 0
+        transform: translateY(100px)
+        transition: all .5s ease-out
+        position: absolute
+
+      .skill-timeline
+        .timeline-table
+          display: flex
+          flex-wrap: wrap
+          dt
+            font-size: 1.4rem
+            margin: 0 0 20px
+            position: relative
+            width: 100%
+            &::after
+              background: #666
+              bottom: 0
+              content: ''
+              left: 0
+              height: 1px
+              position: absolute
+              right: 50%
+          dd
+            font-size: 1.4rem
+            line-height: 2.6rem
+            margin: 0 0 0 20px
+            &:not(:last-of-type)
+              margin: 0 0 30px 20px
+        
+      .skill-event
+        .event-table
+          display: flex
+          flex-wrap: wrap
+          justify-content: flex-end
+          dd
+            align-items: center
+            display: flex
+            font-size: 1.4rem
+            margin: 0 0 10px
+            position: relative
+            width: 100%
+            &::after
+              background: #666
+              bottom: 0
+              content: ''
+              display: block
+              height: 1px
+              left: 0
+              position: absolute
+              right: 50%
+          dt
+            font-size: 1.4rem
+            min-width: 250px
+            width: 80%
+            &:not(:last-of-type)
+              margin: 0 0 20px
+            span
+              display: block
+              text-align: right
+
+      .skill-show
+        transform: translateY(0)
+        opacity: 1
+// hoby
+.l-hoby
+  @include l-mq
+  position: relative
+  &::after
+    background: #fafafa
+    bottom: 0
+    box-shadow: 0px 0 5px #eee
+    content: ''
+    height: 60%
+    position: absolute
+    right: 0
+    width: 40%
+    z-index: -999
+
+.hoby-wrap
+  margin: 0 auto
+  overflow: hidden
+  width: 80%
+  @include l-mq
+    width: 100%
+
+  .hoby-list
+    @include l-mq
+      height: 800px
+      position: relative
+
+    .hoby-list_item
+      margin: 0 30px
+      width: 200px !important
+      @include l-mq
+        margin: 0
+        opacity: 0
+        position: absolute
+        transform: translateY(60px)
+        transition: all 2s cubic-bezier(.215,.61,.355,1)
+        width: 26% !important
+        &:first-of-type
+          left: 0
+          top: 0
+          transition-delay: .2s
+        &:nth-of-type(2)
+          left: 30%
+          top: 70px
+          transition-delay: .4s
+        &:nth-of-type(3)
+          left: 60%
+          top: 140px
+          transition-delay: .6s
+        &:nth-of-type(4)
+          left: 0
+          top: 400px
+          transition-delay: .2s
+        &:nth-of-type(5)
+          left: 30%
+          top: 470px
+          transition-delay: .4s
+        &:last-of-type
+          left: 60%
+          top: 540px
+          transition-delay: .6s
+
+      .hoby-list_icon,
+      h4
+        text-align: center
+        margin: 0 0 40px
+
+      .hoby-list_icon
+        i
+          font-size: 6rem
+      
+      p
+        font-size: 1.2rem
+        line-height: 2.4rem
+
+    .slide-down
+      transform: translateY(0)
+      opacity: 1
+// contact
+.contact-inner
+  display: flex
+  justify-content: space-between
+  margin: 0 auto
+  width: 90%
+  max-width: 600px
+  @include l-mq
+    flex-flow: column
+
+  .contact-sns_kind
+    width: 40%
+    @include l-mq
+      display: flex
+      margin: 0 0 50px
+      width: 100%
+    li
+      &:not(:last-of-type)
+        margin: 0 0 10px
+        @include l-mq
+          margin: 0 40px 0 0
+      
+      a
+        align-items: center
+        display: flex
+        font-size: 1.4rem
+  
+  .contact-address_wrap
+    width: 56%
+    @include l-mq
+      width: 100%
+
+    .contact-address
+      font-size: 1.4rem
+      margin: 0 0 10px
+      @include l-mq
+        margin: 0 0 30px
+
+    .contact-map
+      iframe
+        filter: grayscale(100%)
+
+.show-item
+  opacity: 0
+  transform: translate(0, 50px)
+  transition: all 1.5s
+
+.fadein
+  opacity: 1
+  transform: translate(0, 0)
+
+.page-top
+  bottom: 70px
+  display: none
+  right: 10px
+  position: fixed
+
+  a
+    align-items: center
+    color: #333
+    display: flex
+    font-size: 1.2rem
+
+// footer
+.footer
+  background: rgba(0, 0, 0, .5)
+  color: #fff
+  text-align: center
+  padding: 20px 0

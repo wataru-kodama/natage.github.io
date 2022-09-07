@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="フロントエンドエンジニアのポートフォリオ">
+  <meta name="keywords" content="フロントエンドエンジニア,ポートフォリオ">
+  <meta name="robots" content="index, follow">
+  <meta property="og:image" content="images/og.png">
+  <meta property="og:title" content="Natage Portfolio">
+  <meta property="og:description" content="フロントエンドエンジニアのポートフォリオ">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://natage.github.io/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://natage.github.io/">
+  <meta name="twitter:image" content="images/og.png">
+  <meta name="twitter:title" content="Natage Portfolio">
+  <meta name="twitter:description" content="フロントエンドエンジニアのポートフォリオ">
+  <title>Natage Portfolio</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/filipelinhares/ress/master/dist/ress.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/main.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="pc header-inner">
+      <nav class="global-nav_wrap">
+        <ul class="global-nav" id="global-nav">
+          <li><a href="#top">トップ -top-</a></li>
+          <li><a href="#profile">プロフィール -profile-</a></li>
+          <li><a href="#skill">スキル -skill-</a></li>
+          <li><a href="#hoby">趣味 -hoby-</a></li>
+          <li><a href="#contact">お問い合わせ -contact-</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="hamburger-menu" id="hamburger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+  <main class="main">
+    <div class="hero-wrap" id="top">
+      <div class="hero">
+        <video class="pc" src="images/hero.mp4" loop autoplay muted></video>
+      </div>
+      <section class="hero-heading">
+        <h1 class="page-title">Natage Portfolio</h1>
+        <p class="secondary-title">Check out some of my works</p>
+      </section>
+      <div class="page-hero_scroll">
+        <span class="scroll-text">Scroll</span>
+        <span class="scroll-line"></span>
+      </div>
+    </div>
+    <div class="section-wrap bg-section">
+      <section class="l-profile l-section" id="profile">
+        <h2 class="profile-title section-title">Profile</h2>
+        <div class="profile-wrap">
+          <div class="profile-head">
+            <div class="profile-head_inner">
+              <dl class="profile-table">
+                <dt>出身地</dt>
+                <dd>宮崎県（Miyazaki）</dd>
+                <dt>生年月日</dt>
+                <dd>1999/3/21</dd>
+              </dl>
+              <h3 class="accounts-title">Accounts</h3>
+              <ul class="accounts-kind">
+                <li class="sns-github">
+                  <a href="https://github.com/wataru-kodama">
+                    <i class="fab fa-github-square fa-2x"></i>
+                    <span>Github</span>
+                  </a>
+                </li>
+                <li class="sns-facebook">
+                  <a href="https://www.facebook.com/wataru.kodama.016">
+                    <i class="fab fa-facebook-square fa-2x"></i>
+                    <span>Facebook</span>
+                  </a>
+                </li>
+                <li class="sns-twitter">
+                  <a href="https://twitter.com/k_wataru16">
+                      <i class="fab fa-twitter fa-2x"></i>
+                    <span>Twitter</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <figure class="frolile-head_image show-item">
+              <img src="images/profile.jpg" width="7952" height="5304" alt="プロフィール">
+            </figure>
+          </div>
+          <div class="profile-foot">
+            <div class="profile-description">
+              <h3>今後の目標</h3>
+              <p>IT勉強会に何度か参加し、幅広くに活躍されるエンジニアの方達がたくさんいる中で多くの技術を学んできました。今後は「学ぶ」だけでなく、色んな案件を通してアウトプットしていき、コードの品質・運用というところを考えられるエンジニアになり、フロントエンドだけでなくバックエンドやデザインの方にも「強い」そんなエンジニアを目指していきたいです。</p>
+            </div>
+            <div class="profile-experience">
+              <h3>実績</h3>
+              <p>サイト製作、CMSでの構築、DB、サイトパフォーマンス改善等</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="section-wrap">
+      <section class="l-skill l-section" id="skill">
+        <h2 class="skill-title section-title">Skill</h2>
+        <div class="skill-wrap">
+          <section class="skill-kind">
+            <div class="skill-bar_wrap">
+              <h4>HTML5</h4>
+              <div class="skill-bar_box">
+                <span class="skill-bar_num">90%</span>
+                <span class="skill-bar html-bar" data-total="90"></span>
+              </div>
+            </div>
+            <div class="skill-bar_wrap">
+              <h4>CSS/SASS</h4>
+              <div class="skill-bar_box">
+                <span class="skill-bar_num">90%</span>
+                <span class="skill-bar css-bar" data-total="90"></span>
+              </div>
+            </div>
+            <div class="skill-bar_wrap">
+              <h4>JavaScript / jQuery</h4>
+              <div class="skill-bar_box">
+                <span class="skill-bar_num">80%</span>
+                <span class="skill-bar js-bar" data-total="80"></span>
+              </div>
+            </div>
+            <div class="skill-bar_wrap">
+              <h4>Wordpress</h4>
+              <div class="skill-bar_box">
+                <span class="skill-bar_num">70%</span>
+                <span class="skill-bar wordpress-bar" data-total="70"></span>
+              </div>
+            </div>
+            <div class="skill-bar_wrap">
+              <h4>PHP</h4>
+              <div class="skill-bar_box">
+                <span class="skill-bar_num">80%</span>
+                <span class="skill-bar php-bar" data-total="80"></span>
+              </div>
+            </div>
+            <div class="skill-bar_wrap">
+              <h4>Photoshop</h4>
+              <div class="skill-bar_box">
+                <span class="skill-bar_num">65%</span>
+                <span class="skill-bar photoshop-bar" data-total="65"></span>
+              </div>
+            </div>
+            <div class="skill-bar_wrap">
+              <h4>Illustrator</h4>
+              <div class="skill-bar_box">
+                <span class="skill-bar_num">70%</span>
+                <span class="skill-bar illustrator-bar" data-total="70"></span>
+              </div>
+            </div>
+            <div class="skill-divider"></div>
+          </section>
+          <section class="skill-career_wrap">
+            <ul class="skill-nav">
+              <li class="skill-nav_item target-skill">経歴</li>
+              <li class="skill-nav_item">参加イベント</li>
+            </ul>
+            <div class="skill-career">
+              <div class="skill-timeline career-inner skill-show">
+                <dl class="timeline-table">
+                  <dt>2019.10 - 2020.11</dt><dd class="show-item">プログラミング学習サイト「Progate」、「ドットインストール」などでHTML,CSSに初めて触れる。</dd>
+                  <dt>2019.11 - 2020.4</dt><dd class="show-item">プログラミング教室で現役エンジニアの先生からHTML、CSS、JavaScript/jQuery、wordpressを学び、コーディングの実務も経験。</dd>
+                  <dt>2020.6 - 2020.12</dt><dd class="show-item">職業訓練校で現役のプロから情報セキュリティ知識、DTPデザイン(Illustrator、Photoshop)、マーケティング概論、撮影技法などの基礎を学ぶ。<br><strong>現在、Gulp・PHP・WordPressの勉強に奮闘中</strong></dd>
+                  <dt>2021.1 - </dt><dd class="show-item">IT企業就職 - フロントエンドエンジニア</dd>
+                </dl>
+              </div>
+              <div class="skill-event career-inner">
+                <dl class="event-table">
+                  <dd>2019.9.27</dd><dt>Webナイト宮崎 Vol.6 <span>～てげJavaScript学びたい～</span></dt>
+                  <dd>2019.11.27</dd><dt>Webナイト宮崎 Vol.7 <span>～てげ学び方共有したい～</span></dt>
+                  <dd>2020.1.31</dd><dt>Webナイト宮崎 Vol.8 <span>～てげ良いコード書きたい～</span></dt>
+                  <dd>2020.6.5</dd><dt>Webナイト宮崎 Vol.9 <span>～てげオンラインLTで学びたい～</span></dt>
+                  <dd>2021.10.2</dd><dt>PHPカンファレンス 2021</dt>
+                  <dd>2022.5.15</dd><dt>Googleアナリティクス4</dt>
+                  <dd>2022.5.20</dd><dt>Webナイト宮崎 Vol.15 <span>〜てげ Webフレームワーク学びたい〜</span></dt>
+                </dl>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </div>
+    <div class="section-wrap">
+      <section class="l-hoby l-section" id="hoby">
+        <h2 class="hoby-title section-title">Hoby</h2>
+        <div class="hoby-wrap">
+          <div class="hoby-list">
+            <section class="hoby-list_item">
+              <div class="hoby-list_icon"><i class="fas fa-code"></i></div>
+              <h4>I LOVE CODING</h4>
+              <p>コーディングは勉強した分だけスキルが身に付くことを知り、「webナイト宮崎」などの勉強会に参加し現役エンジニアの方々からコーディングに関する知識・技術など吸収しています。</p>
+            </section>
+            <section class="hoby-list_item">
+              <div class="hoby-list_icon"><i class="fas fa-car"></i></div>
+              <h4>I LOVE DRIVE</h4>
+              <p>2020年に車を購入し、休日ではドライブに出かけることが多くなりました。晴れた日の海岸沿いを窓開けて、音楽聴きながらドライブするのは最高に気持ち良いです！</p>
+            </section>
+            <section class="hoby-list_item">
+              <div class="hoby-list_icon"><i class="fas fa-running"></i></div>
+              <h4>I LOVE SPORT</h4>
+              <p>小学生の時から高校卒業までサッカーをしていました。今でも月に何度かサッカーをする事もあるのですが、その他にもウォーキング、たまにサーフィンなどと身体を動かすことが好きです。</p>
+            </section>
+            <section class="hoby-list_item">
+              <div class="hoby-list_icon"><i class="fas fa-headphones-alt"></i></div>
+              <h4>I LOVE MUSIC</h4>
+              <p>移動中や就寝前、入浴時や家での作業中は基本音楽を聴いています。特にJ-POP、邦楽・洋楽ヒップホップを聴くことが多いです。</p>
+            </section>
+            <section class="hoby-list_item">
+              <div class="hoby-list_icon"><i class="fas fa-dog"></i></div>
+              <h4>I LOVE DOG</h4>
+              <p>我が家には可愛いプードルが2匹います。ヤンチャで元気なクッキーと、おとなしくてマイペースなハルです。2匹ともとにかく可愛くいつも癒されています。</p>
+            </section>
+            <section class="hoby-list_item">
+              <div class="hoby-list_icon"><i class="fas fa-hot-tub"></i></div>
+              <h4>I LOVE SAUNA</h4>
+              <p>テレビ「サ道」をみてからめちゃめちゃサウナにハマりました。市内の「スパぱうぱう」や「極楽湯」でよく汗を流すことが多いです。</p>
+              <p></p>
+            </section>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="section-wrap">
+      <section class="l-contact l-section" id="contact">
+        <h2 class="contact-title section-title">Contact</h2>
+        <div class="contact-inner">
+          <ul class="contact-sns_kind">
+            <li class="sns-facebook">
+              <a href="ttps://www.facebook.com/wataru.kodama.016">
+                <i class="fab fa-facebook-square fa-2x"></i>
+                <span>Facebook</span>
+              </a>
+            </li>
+            <li class="sns-twitter">
+              <a href="https://twitter.com/k_wataru16">
+                <i class="fab fa-twitter fa-2x"></i>
+                <span>Twitter</span>
+              </a>
+            </li>
+          </ul>
+          <div class="contact-address_wrap">
+            <div class="contact-address">
+              <i class="fas fa-map-marker-alt fa-2x"></i>
+              <span>宮崎県 宮崎市</span>
+            </div>
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d865059.8513597117!2d130.77265338225504!3d32.11951997948036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3538b5f6c768a27b%3A0xd4ce23b1878ee7d!2z5a6u5bSO55yM5a6u5bSO5biC!5e0!3m2!1sja!2sjp!4v1599712344750!5m2!1sja!2sjp" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="page-top" id="page-top">
+      <a href="javascript:void(0);">Scroll Top</a>
+    </div>
+  </main>
+  <footer class="footer">
+    <small>copyright &copy; 2020 wataru kodama</small>
+  </footer>
+</body>
+</html>
